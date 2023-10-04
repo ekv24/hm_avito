@@ -122,6 +122,7 @@ def save_dep_stat(file_name: str):
             row = [dep] + list(values.values())
             writer.writerow(row)
 
+
 def user_interaction():
     """output of available options, getting the selected
 
