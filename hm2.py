@@ -1,6 +1,6 @@
 import csv
 
-file_name = 'Corp_Summary.csv'
+FILE_NAME = 'Corp_Summary.csv'
 
 
 def make_team_structure(file_name: str) -> dict:
@@ -9,7 +9,7 @@ def make_team_structure(file_name: str) -> dict:
     Parameter:
     file_name (str): name of file, which contains information about workers
 
-    Return value:
+    Return value:f
     dict: keys - names of departments, values - lists of department's teams
     """
     department_and_teams = {}
@@ -122,9 +122,14 @@ def save_dep_stat(file_name: str):
             row = [dep] + list(values.values())
             writer.writerow(row)
 
+def user_interaction():
+    """output of available options, getting the selected
 
-if __name__ == '__main__':
-
+    uses functions:
+    - display_dep_structure(FILE_NAME)
+    - display_dep_stat(FILE_NAME)
+    - save_dep_stat(FILE_NAME)
+    """
     print('Вам доступны три функции:')
     print('1) Иерархия команд.')
     print('2) Сводный отчет по департаментам.')
@@ -138,9 +143,13 @@ if __name__ == '__main__':
         choice = int(input())
 
     if choice == 1:
-        display_dep_structure(file_name)
+        display_dep_structure(FILE_NAME)
     elif choice == 2:
-        display_dep_stat(file_name)
+        display_dep_stat(FILE_NAME)
     elif choice == 3:
-        save_dep_stat(file_name)
+        save_dep_stat(FILE_NAME)
         print('Отчет сохранен в отдельном файле dep_stat.csv')
+
+
+if __name__ == '__main__':
+    user_interaction()
