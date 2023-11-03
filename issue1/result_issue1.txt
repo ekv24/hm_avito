@@ -1,0 +1,46 @@
+python -m doctest -o NORMALIZE_WHITESPACE -v test_issue1.py > result_issue1.txt
+Trying:
+    encode('123')
+Expecting:
+    '.---- ..--- ...--'
+ok
+Trying:
+    encode('HELLO WORLD')
+Expecting:
+    '.... . .-.. .-.. ---   .-- --- .-. .-.. -..'
+ok
+Trying:
+    encode(')?/')
+Expecting:
+    '-.--.- ..--.. -..-.'
+ok
+Trying:
+    encode('BAAAB') # doctest: +ELLIPSIS
+Expecting:
+    '-... .- ... -...'
+ok
+Trying:
+    encode('111')
+Expecting:
+    '.----          .----           .----'
+ok
+Trying:
+    encode('SOS')
+Expecting:
+    '... --- ...'
+ok
+Trying:
+    encode('hello')
+Expecting:
+    Traceback (most recent call last):
+    ...
+    ValueError: принимаются только заглавные буквы
+ok
+1 items had no tests:
+    test_issue1
+1 items passed all tests:
+   7 tests in test_issue1.encode
+7 tests in 2 items.
+7 passed and 0 failed.
+Test passed.
+

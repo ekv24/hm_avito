@@ -1,0 +1,14 @@
+python3 -m pytest -v test_issue4.py > result_issue4.txt
+============================= test session starts ==============================
+platform darwin -- Python 3.11.4, pytest-7.4.0, pluggy-1.0.0 -- /Users/egorkozlov/anaconda3/bin/python3
+cachedir: .pytest_cache
+rootdir: /Users/egorkozlov/Documents/Avito/Python/homeworks/hm_testing/done/issue4
+plugins: anyio-3.5.0, cov-4.1.0
+collecting ... collected 4 items
+
+test_issue4.py::test_common PASSED                                       [ 25%]
+test_issue4.py::test_many PASSED                                         [ 50%]
+test_issue4.py::test_empty PASSED                                        [ 75%]
+test_issue4.py::test_two_city PASSED                                     [100%]
+
+============================== 4 passed in 0.01s ===============================
