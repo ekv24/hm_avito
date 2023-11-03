@@ -40,29 +40,3 @@ class TestOHE(unittest.TestCase):
         exp_transformed_cities = [("Moscow", [1]), ("Moscow", [1])]
         transformed_cities = fit_transform(cities)
         self.assertEqual(exp_transformed_cities, transformed_cities)
-
-
-if __name__ == "__main__":
-    from pprint import pprint
-
-    cities = [
-        "New York",
-        "London",
-        "Paris",
-        "Tokyo",
-        "Sydney",
-        "Los Angeles",
-        "Rome",
-        "Berlin",
-        "Moscow",
-        "Beijing",
-    ]
-    exp_transformed_cities = [
-        ("Moscow", [0, 0, 1]),
-        ("New York", [0, 1, 0]),
-        ("Moscow", [0, 0, 1]),
-        ("London", [1, 0, 0]),
-    ]
-    transformed_cities = fit_transform(cities)
-    pprint(transformed_cities)
-    assert transformed_cities == exp_transformed_cities
