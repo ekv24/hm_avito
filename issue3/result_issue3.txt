@@ -1,0 +1,10 @@
+python -m unittest -v test_issue3.py
+test_common (test_issue3.TestOHE.test_common) ... ok
+test_empty (test_issue3.TestOHE.test_empty) ... ok
+test_many (test_issue3.TestOHE.test_many) ... ok
+test_two_city (test_issue3.TestOHE.test_two_city) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+OK
