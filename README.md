@@ -12,6 +12,7 @@ python -m doctest -o NORMALIZE_WHITESPACE -v test_issue1.py > result_issue1.txt
 >>> encode('BAAAB') # doctest: +ELLIPSIS
 '-... .- ... -...'
 ```
+Данное тестирование проверяет числовые строки, буквенные и строки из знаков препинания. Также, один из тестов обрабатывает одно возможное исключение.
 
 ## Issue 2
 
@@ -21,7 +22,7 @@ python -m doctest -o NORMALIZE_WHITESPACE -v test_issue1.py > result_issue1.txt
 python3 -m pytest -v test_issue2.py > result_issue2.txt
 ```
 в командной строке. Результаты тестирования буду записаны в файл ```result_issue2.txt```.
-
+Данное тестирование проверяет числовые и буквенные строки.
 ## Issue 3
 
 #### Тестирование (```unittest```) алгоритма One-Hot-Encoding (метода ```fit_transform```)
@@ -30,7 +31,7 @@ python3 -m pytest -v test_issue2.py > result_issue2.txt
 python -m unittest -v test_issue3.py
 ```
 в командной строке. 
-
+Данное тестирование проверяет некоторые комбинации входных данных и обрабатывает одно возможное исключение.
 ## Issue 4
 
 #### Тестирование (```pytest```) алгоритма One-Hot-Encoding (метода ```fit_transform```)
@@ -39,7 +40,7 @@ python -m unittest -v test_issue3.py
 python3 -m pytest -v test_issue4.py > result_issue4.txt
 ```
 в командной строке. Результаты тестирования буду записаны в файл ```result_issue4.txt```.
-
+Данное тестирование проверяет некоторые комбинации входных данных и обрабатывает одно возможное исключение.
 ## Issue 5
 
 #### Тестирование (```unittest.mock``` и ```@pytest.fixture```) алгоритма, возвращающего текущий год. Дату и время получаем из API-worldclock.
@@ -48,3 +49,5 @@ python3 -m pytest -v test_issue4.py > result_issue4.txt
 python -m pytest test_issue5.py --cov . --cov-report html
 ```
 в командной строке. Результаты тестирования будут сохранены в новой папке текущей директории. Результаты будут представлены в виде ```coverage``` с демонстрацией покрытия тестами кода алгоритма.
+
+Данное тестирование проверяет все допустимые форматы входных данных, а также проверяет одно возможное исключение. Реализовано полное покрытие кода тестами.
